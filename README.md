@@ -19,7 +19,6 @@
 ![image](https://github.com/shlim1392/Cleantalk/assets/152074011/a8c04e67-73d6-447e-b3e9-a15a78718233)
 
 ## 사용기술스택
----
 | **영역**                | **기술 스택**                                                                                  |
 | --------------------- | ------------------------------------------------------------------------------------------ |
 | **사용언어**              | **python, java**                                                                           |
@@ -38,8 +37,7 @@
 | **인터랙티브 파이썬 도구**      | **ipykernel, tensorboard**                                                                 |
 
 ## Reference
----
-[KcELECTRA](https://github.com/Beomi/KcELECTRA)  
+### [KcELECTRA](https://github.com/Beomi/KcELECTRA)  
 [CLOVA SPEECH](https://clova.ai/speech)  
 [DIALOGFLOW](https://cloud.google.com/dialogflow)  
 [Korean Hate Speech Detection](https://www.kaggle.com/competitions/korean-hate-speech-detection/data)  
