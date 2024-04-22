@@ -28,13 +28,10 @@
 | **웹 프레임워크 & 서버**      | **FastAPI, uvicorn, httpx, SQLAlchemy**                                                    |
 | **데이터베이스**            | **mysql, hadoop**                                                                          |
 | **파이프라인**             | **airflow, spark**                                                                         |
-| **데이터베이스 관리**         | **PyMySQL, pymongo, chromadb**                                                             |
 | **시각화**               | **matplotlib, seaborn, graphviz**                                                          |
-| **오디오 처리**            | **librosa**                                                                                |
 | **웹 크롤링 & 데이터 파싱**    | **beautifulsoup4, selenium**                                                               |
 | **협업 & 데이터 공유**       | **git, notion, slack**                                                                     |
 | **정규 표현식**            | **regex**                                                                                  |
-| **인터랙티브 파이썬 도구**      | **ipykernel, tensorboard**                                                                 |
 
 ## Reference
 - [KcELECTRA](https://github.com/Beomi/KcELECTRA)  
