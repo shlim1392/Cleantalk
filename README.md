@@ -1,12 +1,10 @@
 # CLEANTALK
----
 > 상담원과 전화상담 시 STT(clova speach)를 사용하여 욕설, 거친 어조를 시스템이 감지하여 마스킹처리하고
 > 음소거 기능, ai챗봇 연결을 통해 상담원의 인권을 보호하는 서비스 구현
 
 <br><br>
 ### [KcELECTRA](https://github.com/Beomi/KcELECTRA)기반 자연어처리 욕설감지 딥러닝 프로젝트
 
----
 
 
 ![image](https://github.com/shlim1392/Cleantalk/assets/152074011/985a7be5-093f-4cb0-82b4-ad0787ef4943)
