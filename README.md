@@ -3,6 +3,7 @@
 > 상담원과 전화상담 시 STT(clova speach)를 사용하여 욕설, 거친 어조를 시스템이 감지하여 마스킹처리하고
 > 음소거 기능, ai챗봇 연결을 통해 상담원의 인권을 보호하는 서비스 구현
 
+<br><br>
 ### [KcELECTRA](https://github.com/Beomi/KcELECTRA)기반 자연어처리 욕설감지 딥러닝 프로젝트
 
 ---
@@ -37,12 +38,12 @@
 | **인터랙티브 파이썬 도구**      | **ipykernel, tensorboard**                                                                 |
 
 ## Reference
-### [KcELECTRA](https://github.com/Beomi/KcELECTRA)  
-[CLOVA SPEECH](https://clova.ai/speech)  
-[DIALOGFLOW](https://cloud.google.com/dialogflow)  
-[Korean Hate Speech Detection](https://www.kaggle.com/competitions/korean-hate-speech-detection/data)  
-[Korean UnSmile Dataset](https://github.com/smilegate-ai/korean_unsmile_dataset?fbclid=IwAR0xTlHYCWK0LtrghSL1bPm2su69-LbjisutmcvLlERlHzroMlVpHq3h71g)  
-[KOLD: Korean Offensive Language Dataset](https://github.com/boychaboy/kold)  
-[인공지능 윤리 연구를 위한 비정형 텍스트 데이터셋](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=268)  
+- [KcELECTRA](https://github.com/Beomi/KcELECTRA)  
+- [CLOVA SPEECH](https://clova.ai/speech)  
+- [DIALOGFLOW](https://cloud.google.com/dialogflow)  
+- [Korean Hate Speech Detection](https://www.kaggle.com/competitions/korean-hate-speech-detection/data)  
+- [Korean UnSmile Dataset](https://github.com/smilegate-ai/korean_unsmile_dataset?fbclid=IwAR0xTlHYCWK0LtrghSL1bPm2su69-LbjisutmcvLlERlHzroMlVpHq3h71g)  
+- [KOLD: Korean Offensive Language Dataset](https://github.com/boychaboy/kold)  
+- [인공지능 윤리 연구를 위한 비정형 텍스트 데이터셋](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=268)  
 
 
