@@ -1,0 +1,44 @@
+/*덮어쓰기 부분 Override*/
+.home-content sections h1{
+  font-color : black;
+}
+
+
+
+.login {
+    margin-top: 0px;
+    border: 2px;
+    background-color: rgb(215, 141, 165);
+    font-color:#191c21;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+
+  .form-group label {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    padding: 8px;
+    width: 230px;
+    /*입력 폼 크기*/
+    height: 40px;
+  }
+  
+  /*
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }*/
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }

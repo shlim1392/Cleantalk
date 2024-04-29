@@ -1,0 +1,26 @@
+/* styles.css 파일 내 */
+iframe {
+    filter: invert(100%); 
+    }
+    
+
+/* 헤더의 배경색 변경 */
+.b-agent-demo_header {
+    background-color: #4CCEFF;
+  }
+
+/* 로고 이미지 변경 */
+.b-agent-demo_header-icon img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    margin: auto;
+    content: url('img/undraw_rocket.svg'); /* 로고 이미지 경로로 변경 */
+}
