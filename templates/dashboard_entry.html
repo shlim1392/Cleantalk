@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>CleanTalk - Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/dialogflow_styles_blue.css">
+    <link href="../static/css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        thead th {
+        text-align: center;
+        }
+  </style>
+    </style>
+
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">CleanTalk! Admin <sup>^^</sup></div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard_entry.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Main</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Functions
+            </div>
+            <li class="nav-item">
+                <a id="callButton" class="nav-link" href="#" data-toggle="modal" data-target="#callModal">
+                    <i class="fas fa-fw fa-phone-alt"></i>
+                    <span>Call</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>특별회원관리</span></a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+            <div class="sidebar-card d-none d-lg-flex">
+                <img class="sidebar-card-illustration mb-2" src="../static/img/undraw_rocket.svg" alt="...">
+                <p class="text-center mb-2"><strong>Admin</strong></p>
+                <a class="btn btn-primary btn-sm" href="mailto:admin@cleantalk.com">관리자에게 문의</a>
+            </div>
+
+            </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <span class="badge badge-danger badge-counter">+</span>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center 알림
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">4월 19일, 2024</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">4월 5일, 2024</div>
+                                        식목일 행사 공지!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">3월 1일, 2024</div>
+                                        삼일절 공지사항
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts  모두보기</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center 메세지함
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="../static/img/undraw_profile_1.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! Hello World! :D</div>
+                                        <div class="small text-gray-500">Python Anaconda Lizard</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="../static/img/undraw_profile_2.svg"
+                                            alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">2897고객 특별관리 강도 상향관련</div>
+                                        <div class="small text-gray-500">인트라넷 자동발송 메세지</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="../static/img/undraw_profile_3.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">오늘 혹시 점심메뉴 뭔지 알아요? 맛집 알아놨는데..</div>
+                                        <div class="small text-gray-500">김영아 팀장님</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">스팸자동분류된 메세지입니다.</div>
+                                        <div class="small text-gray-500">Spam Dog</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">상담원1</span>
+                                <img class="img-profile rounded-circle"
+                                    src="../static/img/undraw_profile_3.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile 프로필
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings 세팅
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log 로그
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                 </nav>
+                <div class="container-fluid">
+<div class="card shadow mb-4">
+    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
+        role="button" aria-expanded="true" aria-controls="collapseCardExample">
+        <h6 class="m-0 font-weight-bold text-primary"> 고객정보상세검색 </h6>
+    </a>
+<div class="collapse show" id="collapseCardExample">
+        <div class="card-body">
+<div class="customer_info border-bottom-secondary">
+                <form>
+                <div class="form-group">
+                    <div class="waqu">
+                            <p>
+                            <span class="form-item">
+                                <label for="member-code">회원코드</label>
+                                <input type="text" class="form-control inline-input" id="member-code" name="member-code">
+                            </span>
+                            <span class="form-item">
+                                <label for="member-id">아이디</label>
+                                <input type="text" class="form-control inline-input" id="member-id" name="member-id">
+                            </span>
+                            </p>
+                    </div>
+                <div class="form-group">
+                    <div class="waqu">
+                            <p>
+                                <span class="form-item">
+                                    <label for="member-name">회원명</label>
+                                    <input type="text" class="form-control inline-input" id="member-name" name="member-name">
+                                </span>
+                                <span class="form-item">
+                                    <label for="member-phone">회원 휴대폰번호</label>
+                                    <input type="tel" class="form-control inline-input" id="member-phone" name="member-phone">
+                                </span>
+                            </p>
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="form-group">
+                    <label><strong>특별고객대상여부</strong></label><br>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input inline-input" type="radio" name="special-member" id="special-member-yes" value="Y">
+                    <label class="form-check-label" for="special-member-yes">Y</label>
+                </div>
+        <div class="form-check form-check-inline">
+                    <input class="form-check-input inline-input" type="radio" name="special-member" id="special-member-no" value="N">
+                    <label class="form-check-label" for="special-member-no">N</label>
+        </div>
+        <br><br>
+                                    </div>
+                                </div>
+                                <form
+                                class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                        aria-label="Search" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            </a>
+                            </form>
+                        </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">고객정보</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>회원코드</th>
+                        <th>아이디</th>
+                        <th>회원명 </th>
+                        <th>전화번호</th>
+                        <th>분류코드</th>
+                    </tr>
+                </thead>
+                <tbody id="membersList">
+                    {% for 회원 in 회원들 %}
+                    <tr>
+                        <td>{{ 회원.회원코드 }}</td>
+                        <td>{{ 회원.아이디 }}</td>
+                        <td>{{ 회원.회원명 }}</td>
+                        <td>{{ 회원.휴대폰번호 }}</td>
+                        <td>{{ 회원.분류코드 }}</td>
+                    {% endfor %}
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy;2024 3부3조. All Rights Reserved.
+                        </span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body"><br>회원정보 저장되었는지 확인 되셨는지요?<br><br>이대로 로그아웃 하시겠습니까?<br><br></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">incoming Call</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                특별관리단계: <span id="membergrade"></span><br><br>
+                회원코드: <span id="memberCode"></span><br>
+                아이디: <span id="memberId"></span><br>
+                회원명: <span id="memberName"></span><br>
+                휴대폰번호: <span id="memberPhone"></span><br>
+              </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#callModal').on('shown.bs.modal', function () {
+                            $.ajax({
+                                url: 'http://127.0.0.1:8001/process/',
+                                type: 'GET',
+                                dataType: 'json',
+                                success: function(data) {
+                                    $('#memberCode').text(data['회원코드']);
+                                    $('#memberId').text(data['아이디']);
+                                    $('#memberName').text(data['회원명']);
+                                    $('#memberPhone').text(data['휴대폰번호']);
+                                    $('#membergrade').text(data['특별관리단계']);
+
+                                    localStorage.setItem('회원코드', data['회원코드']);
+                                    localStorage.setItem('아이디', data['아이디']);
+                                    localStorage.setItem('회원명', data['회원명']);
+                                    localStorage.setItem('휴대폰번호', data['휴대폰번호']);
+                                    localStorage.setItem('특별관리단계', data['특별관리단계']);
+                                },
+                                error: function(error) {
+                                    console.error('Error:', error);
+                                }
+                            });
+                        });
+                    });
+                    </script>
+             <div class="modal-footer">
+                <audio id="myAudio" src="../static/audio/sample7.mp3"></audio>
+
+                <a class="btn btn-primary" id="callModalLink" href="#aiModal" data-toggle="modal" data-dismiss="modal">통화연결</a>
+
+                <script>
+                    var globalData = [];
+
+                    document.addEventListener('DOMContentLoaded', function() {
+
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("GET", "http://127.0.0.1:8001/process/", true);
+                        xhr.onload = function () {
+                            if (xhr.status >= 200 && xhr.status < 300) {
+                                var response = JSON.parse(xhr.responseText);
+
+                                globalData = response.message;
+                            } else {
+                                console.error('요청 실패:', xhr.statusText);
+                            }
+                        };
+                        xhr.onerror = function () {
+                            console.error('네트워크 에러 발생');
+                        };
+                        xhr.send();
+                    });
+
+                    document.getElementById('callModalLink').addEventListener('click', function() {
+                        var messageElement = document.getElementById('message');
+                        messageElement.innerHTML = '';
+                        if(globalData && globalData.length > 0){
+
+                            typeAllTexts(globalData, 0);
+                        }else{
+                            messageElement.innerHTML = "데이터가 없습니다.";
+                        }
+                    });
+
+                    function typeText(text, index, callback) {
+                        if (index < text.length) {
+                            document.getElementById('message').innerHTML += text.charAt(index);
+                            index++;
+                            setTimeout(function() {
+                                typeText(text, index, callback);
+                            }, 100);
+                        } else {
+                            callback();
+                        }
+                    }
+
+                    function typeAllTexts(data, dataIndex) {
+                        if (dataIndex < data.length) {
+                            typeText(data[dataIndex], 0, function() {
+                                dataIndex++;
+                                if(dataIndex < data.length){
+                                    setTimeout(function() {
+                                        document.getElementById('message').innerHTML += '<br>';
+                                        typeAllTexts(data, dataIndex);
+                                    }, 500);
+                                }
+                            });
+                        }
+                    }
+                    </script>
+
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var callButton = document.getElementById('callModalLink');
+                    var muteButton = document.getElementById('muteButton');
+                    callButton.addEventListener('click', function() {
+                        var audio = document.getElementById('myAudio');
+                        audio.play();
+                    });
+                    muteButton.addEventListener('click', function() {
+                        var audio = document.getElementById('myAudio');
+                        audio.pause();
+                        audio.currentTime = 0;
+                    });
+                });
+                </script>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+<div class="modal fade" id="aiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div  class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">on Call</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            특별관리단계: <span id="anotherMemberGrade"></span><br><br>
+            회원코드: <span id="anotherMemberCode"></span><br>
+            아이디: <span id="anotherMemberId"></span><br>
+            회원명: <span id="anotherMemberName"></span><br>
+            휴대폰번호: <span id="anotherMemberPhone"></span><br>
+            <span id="callDuration">00분:00초</span>
+            <script>
+                $(document).ready(function() {
+                $('#aiModal').on('shown.bs.modal', function () {
+                    var memberCode = localStorage.getItem('회원코드');
+                    var memberId = localStorage.getItem('아이디');
+                    var memberName = localStorage.getItem('회원명');
+                    var memberPhone = localStorage.getItem('휴대폰번호');
+                    var memberGrade = localStorage.getItem('특별관리단계');
+
+                    if(memberCode && memberId && memberName && memberPhone && memberGrade) {
+                        $('#anotherMemberCode').text(memberCode);
+                        $('#anotherMemberId').text(memberId);
+                        $('#anotherMemberName').text(memberName);
+                        $('#anotherMemberPhone').text(memberPhone);
+                        $('#anotherMemberGrade').text(memberGrade);
+                    } else {
+                        alert('회원 정보를 불러올 수 없습니다.');
+                    }
+                });
+            });
+            </script>
+                                <script>
+                                    let startTime;
+                                    let timer;
+
+                                    function updateCallDuration() {
+                                        const now = new Date();
+                                        const diff = now - startTime;
+                                        const seconds = Math.floor(diff / 1000);
+                                        const minutes = Math.floor(seconds / 60);
+                                        const remainingSeconds = seconds % 60;
+                                        document.getElementById('callDuration').textContent =
+                                            `${minutes.toString().padStart(2, '0')}분:${remainingSeconds.toString().padStart(2, '0')}초`;
+                                    }
+
+                                    function startCallTimer() {
+                                        if (timer) {
+                                            clearInterval(timer);
+                                        }
+                                        console.log('모달이 열렸습니다. 타이머를 시작합니다.');
+                                        startTime = new Date();
+                                        timer = setInterval(updateCallDuration, 1000);
+                                    }
+
+                                    function stopCallTimer() {
+                                        clearInterval(timer);
+                                        console.log('타이머를 중지합니다.');
+                                        document.getElementById('callDuration').textContent = '00분:00초';
+                                    }
+
+                                    $(document).ready(function() {
+                                        $('#aiModal').on('shown.bs.modal', startCallTimer);
+                                        $('#aiModal').on('hidden.bs.modal', stopCallTimer);
+                                    });
+                                </script>
+                                <br><br>
+        <div id="message"></div>
+            <br>
+                </button--></div>
+
+
+            <div class="modal fade" id="DialogflowModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <!--div class="modal-dialog" role="document"-->
+                <div class="modal-dialog">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">DialogBot</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Dialogbot -->
+                        <iframe
+                            allow="microphone;"
+                            width="467"
+                            height="530"
+                            src="https://console.dialogflow.com/api-client/demo/embedded/49d92ae4-3faa-44a2-8ad6-896d28e921f2">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        <div class="modal-footer">
+            <button id="muteButton" class="btn btn-secondary">음소거</button>
+            <a class="btn btn-secondary" id="DialogflowModalLink" href="#DialogflowModal" data-toggle="modal" role="button">AI 통화 전환</a>
+            <a class="btn btn-primary" id="callModalLink" href="#notice" data-toggle="modal" data-dismiss="modal">통화종료</a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="notice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">the End</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+
+        <div class="modal-body">회원 성명 : 박지영 님과의 상담이 <br><br>"부적절한 내용"으로 인해 강제 종료되었습니다..<br><br>
+                                </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">확인</button>
+        </div>
+
+    </div>
+</div>
+</div>
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../static/js/sb-admin-2.min.js"></script>
+    <script src="../static/vendor/chart.js/Chart.min.js"></script>
+    <script src="../static/js/demo/chart-area-demo.js"></script>
+    <script src="../static/js/demo/chart-pie-demo.js"></script>
+</body>
+</html>
