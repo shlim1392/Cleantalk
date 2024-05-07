@@ -21,17 +21,18 @@
 ## 사용기술스택
 | **영역**                | **기술 스택**                                                                                  |
 | --------------------- | ------------------------------------------------------------------------------------------ |
-| **사용언어**              | **python, java**                                                                           |
-| **데이터 분석(EDA) 및 전처리** | **numpy, pandas, Scipy**                                                                   |
-| **딥러닝**               | **scikit-learn, TensorFlow, AutoKeras, torch, transformers, optuna, tokenizers, tf-keras** |
-| **자연어 처리**            | **Konlpy, soynlp, soyspacing, krwordrank, customized_konlpy, tiktoken, emoji, langchain**  |
-| **웹 프레임워크 & 서버**      | **FastAPI, uvicorn, httpx, SQLAlchemy**                                                    |
-| **데이터베이스**            | **mysql, hadoop**                                                                          |
-| **파이프라인**             | **airflow, spark**                                                                         |
-| **시각화**               | **matplotlib, seaborn, graphviz**                                                          |
-| **웹 크롤링 & 데이터 파싱**    | **beautifulsoup4, selenium**                                                               |
-| **협업 & 데이터 공유**       | **git, notion, slack**                                                                     |
-| **정규 표현식**            | **regex**                                                                                  |
+| **사용언어**              | **Python, Java **                                                                           |
+| **데이터 분석(EDA) 및 전처리** | **Numpy, Pandas, Scipy**                                                                   |
+| **딥러닝**               | **scikit-learn, TensorFlow, AutoKeras, Pytorch, Transformers, Optuna, Tokenizers, Tf-keras** |
+| **자연어 처리**            | **Konlpy, Soynlp,  customized_konlpy, tiktoken, emoji**  |
+| ** 프론트앤드 **           | ** Javascript, HTML, CSS **                                                                |
+| **웹 프레임워크 & 서버**      | **FastAPI, Uvicorn, Httpx, SQLAlchemy**                                                    |
+| **데이터베이스**            | **Mysql, Hadoop**                                                                          |
+| **파이프라인**             | **Airflow, Spark**                                                                         |
+| **시각화**               | **Matplotlib, Seaborn, Graphviz**                                                          |
+| **웹 크롤링 & 데이터 파싱**    | **Beautifulsoup4, Selenium**                                                               |
+| **협업 & 데이터 공유**       | **Git, Notion, Slack**                                                                     |
+| **정규 표현식**            | **Regex**                                                                                  |
 
 ## Reference
 - [KcELECTRA](https://github.com/Beomi/KcELECTRA)  
