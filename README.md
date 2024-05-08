@@ -21,7 +21,7 @@
 ## 사용기술스택
 | **영역**                | **기술 스택**                                                                                  |
 | --------------------- | ------------------------------------------------------------------------------------------ |
-| **사용언어**              | **Python, Java **                                                                           |
+| **사용언어**              | **Python, Java**                                                                           |
 | **데이터 분석(EDA) 및 전처리** | **Numpy, Pandas, Scipy**                                                                   |
 | **딥러닝**               | **scikit-learn, TensorFlow, AutoKeras, Pytorch, Transformers, Optuna, Tokenizers, Tf-keras** |
 | **자연어 처리**            | **Konlpy, Soynlp,  customized_konlpy, tiktoken, emoji**  |
