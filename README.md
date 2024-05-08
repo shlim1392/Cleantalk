@@ -23,8 +23,8 @@
 | --------------------- | ------------------------------------------------------------------------------------------ |
 | **사용언어**              | **Python, Java**                                                                           |
 | **데이터 분석(EDA) 및 전처리** | **Numpy, Pandas, Scipy**                                                                   |
-| **딥러닝**               | **scikit-learn, TensorFlow, AutoKeras, Pytorch, Transformers, Optuna, Tokenizers, Tf-keras** |
-| **자연어 처리**            | **Konlpy, Soynlp,  customized_konlpy, tiktoken, emoji**  |
+| **딥러닝**               | **Scikit-learn, TensorFlow, AutoKeras, Pytorch, Transformers, Optuna, Tokenizers, Tf-keras** |
+| **자연어 처리**            | **Konlpy, Soynlp,  Customized_konlpy, Tiktoken, Emoji**  |
 | **프론트앤드**           | **Javascript, HTML, CSS**                                                                |
 | **웹 프레임워크 & 서버**      | **FastAPI, Uvicorn, Httpx, SQLAlchemy**                                                    |
 | **데이터베이스**            | **Mysql, Hadoop**                                                                          |
